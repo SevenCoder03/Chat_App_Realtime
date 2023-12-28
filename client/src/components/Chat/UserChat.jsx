@@ -62,7 +62,7 @@ const UserChat = ({ chat, user }) => {
             </div>
             <div className="d-flex flex-column align-items-end">
                 <div className="date">
-                    {moment(latestMessage?.createAt).calendar()}
+                    {moment(latestMessage?.createdAt).calendar()}
                 </div>
                 <div
                     className={

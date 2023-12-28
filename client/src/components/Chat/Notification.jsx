@@ -25,6 +25,11 @@ const Notification = () => {
         };
     });
 
+    const notificationsBoxStyle = {
+        maxHeight: "300px",
+        overflowY: "auto",
+    };
+
     return (
         <div className="notifications">
             <div
@@ -48,7 +53,10 @@ const Notification = () => {
                 )}
             </div>
             {isOpen ? (
-                <div className="notifications-box">
+                <div
+                    className="notifications-box"
+                    style={notificationsBoxStyle}
+                >
                     <div className="notifications-header">
                         <h3>Notifications</h3>
                         <div

@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../context/AuthContext";
 import Notification from "./Chat/Notification";
+import IconOpenAI from "../assets/IconOpenAI.svg";
 
 const NavBar = () => {
     const { user, logoutUser } = useContext(AuthContext);
@@ -21,6 +22,16 @@ const NavBar = () => {
                         Messenger
                     </Link>
                 </h2>
+                {user && (
+                    <div>
+                        <Link
+                            to="/chatgpt"
+                            className="link-light text-decoration-none"
+                        >
+                            <img src={IconOpenAI} alt="" height="30px" />
+                        </Link>
+                    </div>
+                )}
                 {user && (
                     <span className="text-warning">
                         Logged in as {user?.name}
